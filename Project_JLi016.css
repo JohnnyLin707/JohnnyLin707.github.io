@@ -1,0 +1,462 @@
+/* All Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: #444;
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+main {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    
+    .avatar-container {
+        max-width: 250px;
+    }
+    
+    .video-container {
+        border-width: 6px;
+        max-width: 95%;
+    }
+}
+
+
+/* index.html */
+.personal-info {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.avatar-section {
+    margin: 2rem 0;
+}
+
+#showAvatarBtn {
+    background: linear-gradient(135deg, #ff6b6b, #ffa3a3);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+#showAvatarBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+.avatar-container {
+    margin: 2rem auto;
+    max-width: 300px;
+    border: 8px solid;
+    border-image: linear-gradient(45deg, #ff6b6b, #feca57, #1dd1a1, #54a0ff, #5f27cd);
+    border-image-slice: 1;
+    padding: 5px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.avatar-container.show {
+    opacity: 1;
+}
+
+.avatar-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Gallery Sections */
+.image-gallery,
+.life-gallery {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+.image-gallery .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.life-gallery .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto; 
+    max-height: 500px; 
+    object-fit: contain; 
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.life-gallery .gallery-item img {
+    height: 300px;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.03);
+}
+
+
+.slide-in-left {
+    transform: translateX(-100vw);
+}
+
+.slide-in-right {
+    transform: translateX(100vw);
+}
+
+.gallery-item.active {
+    transform: translateX(0);
+}
+
+
+
+
+/* page2_JLi016.html */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    border: 10px solid;
+    border-image: linear-gradient(#f6b73c, #4d9f0c) 60;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.video-container::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+/* “Introduction” */
+.video-presentation h2 {
+    text-align: center;
+}
+
+
+.video-caption {
+    text-align: center;
+    font-style: italic;
+    color: #3366cc; 
+}
+
+
+/* page3_JLi016.html */
+.city-intro {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-section {
+    background-color: #e6f7ff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.quiz-section select {
+    padding: 0.5rem;
+    margin: 1rem 0;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.quiz-section button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.quiz-section button:hover {
+    background-color: #45a049;
+}
+
+.attractions {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.attractions ol {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.attractions li {
+    margin-bottom: 0.8rem;
+}
+
+/* Table styling for attractions */
+.attractions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+        
+.attractions-table th {
+    background-color: #6e8efb;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+        
+.attractions-table td {
+    padding: 15px;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+}
+        
+.attractions-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+        
+.attractions-table tr:hover {
+    background-color: #f1f1f1;
+}
+        
+.attraction-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+        
+.attraction-description {
+    padding-right: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    padding: 20px;
+}
+.credit {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+}
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* page4_JLi016.html */
+/* Social Media Section Styles */
+.social-media {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.social-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+.social-table td {
+    padding: 1.5rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.social-desc {
+    width: 60%;
+}
+
+.social-desc h3 {
+    color: #6e8efb;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.social-desc p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.social-img {
+    width: 40%;
+    text-align: center;
+}
+
+.social-img img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.social-img img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-table {
+        display: block;
+    }
+    
+    .social-table tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    
+    .social-table td {
+        width: 100% !important;
+        padding: 1rem;
+    }
+    
+    .social-img img {
+        max-width: 150px;
+    }
+}
