@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guide</title>
+    <link rel="stylesheet" href="css/Project_JLi016.css">
+    <script src="script/Project_JLi016.js"></script>
+</head>
+<body>
+    <header>
+        <h1>My Favorite City Travel Guide</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2_JLi016.html">My Studies</a></li>
+                <li><a href="page3_JLi016.html">My favorite city</a></li>
+                <li><a href="page4_JLi016.html">My Social Media</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="city-intro">
+            <h2>Asia's World City</h2>
+            <p>This is a vibrant, fast-paced city where East meets West. With its stunning skyline, delicious dim sum, and unique blend of Chinese and British influences. It offers an unforgettable travel experience.</p>
+        </section>
+
+        <section class="quiz-section">
+            <h2>Can you guess my favorite travel destination?</h2>
+            
+            
+            <select id="city-select">
+                <option value="">-- Select a City --</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="Seoul">Seoul</option>
+                <option value="Shanghai">Shanghai</option>
+                <option value="Beijing">Beijing</option>
+                <option value="Hong Kong">Hong Kong</option>
+                <option value="Macau">Macau</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Bangkok">Bangkok</option>
+                <option value="Kuala Lumpur">Kuala Lumpur</option>
+                <option value="Taipei">Taipei</option>
+            </select>
+            
+            <button onclick="checkAnswer('Hong Kong')">Submit Answer</button>
+        </section>
+
+        <section class="attractions">
+            <h2>Top 10 Must-Visit Attractions</h2>
+
+            <table class="attractions-table">
+                <tr>
+                    <th>Description</th>
+                    <th>Image</th>
+                </tr>
+                <tr>
+                    <td class="attraction-description">Victoria Peak - The highest point on its the most famous Island with spectacular city views</td>
+                    <td><img src="images/hk1.jpg" alt="Victoria Peak" class="attraction-img"></td>
+                </tr>
+                <tr>
+                    <td class="attraction-description">Star Ferry - The iconic ferry ride across Victoria Harbour</td>
+                    <td><img src="images/hk2.jpg" alt="Star Ferry" class="attraction-img"></td>
+                </tr>
+                <tr>
+                    <td class="attraction-description">Disneyland - A magical theme park perfect for families</td>
+                    <td><img src="images/hk3.jpg" alt="Hong Kong Disneyland" class="attraction-img"></td>
+                </tr>
+                <tr>
+                    <td class="attraction-description">Temple Street Night Market - A lively market with street food and souvenirs</td>
+                    <td><img src="images/hk4.jpg" alt="Temple Street Night Market" class="attraction-img"></td>
+                </tr>
+                <tr>
+                    <td class="attraction-description">Ocean Park - A marine-life theme park with roller coasters and animal exhibits</td>
+                    <td><img src="images/hk5.jpg" alt="Ocean Park" class="attraction-img"></td>
+                </tr>
+                <tr>
+                    <td class="attraction-description">Ngong Ping 360 - A cable car ride to the Tian Tan Buddha on Lantau Island</td>
+                    <td><img src="images/hk6.jpg" alt="Ngong Ping 360" class="attraction-img"></td>
+                </tr>
+                <tr>
+                    <td class="attraction-description">Lan Kwai Fong - It's famous nightlife and dining district</td>
+                    <td><img src="images/hk7.jpg" alt="Lan Kwai Fong" class="attraction-img"></td>
+                </tr>
+                <tr>
+                    <td class="attraction-description">Wong Tai Sin Temple - A beautiful and popular Taoist temple</td>
+                    <td><img src="images/hk8.jpg" alt="Wong Tai Sin Temple" class="attraction-img"></td>
+                </tr>
+                <tr>
+                    <td class="attraction-description">Repulse Bay - A scenic beach with a mix of colonial and Chinese architecture</td>
+                    <td><img src="images/hk9.jpg" alt="Repulse Bay" class="attraction-img"></td>
+                </tr>
+                <tr>
+                    <td class="attraction-description">PMQ - A creative hub with designer shops and restaurants in a former police dormitory</td>
+                    <td><img src="images/hk10.jpg" alt="PMQ" class="attraction-img"></td>
+                </tr>
+            </table>
+
+            <div class="credit">
+                <h3>These photos are from <a href="https://www.istockphoto.com" target="_blank">Royalty-Free Images, Illustrations, Vectors and Videos - iStock</a></h3>
+                <p><a href="https://www.istockphoto.com" target="_blank">www.istockphoto.com</a></p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Johnny Lin's Travel Guide. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
